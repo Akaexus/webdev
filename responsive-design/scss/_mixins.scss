@@ -1,0 +1,19 @@
+@import 'vars';
+
+
+@mixin media-screen($size) {
+  $conf: map-get($screen-sizes, $size);
+  @if map-has-key($conf, 'min') and map-has-key($conf, 'max') {
+    @media only screen and (min-width: map-get($conf, 'min')) and (max-width: map-get($conf, 'max')) {
+      @content
+    }
+  } @else if(map-has-key($conf, 'min')) {
+    @media only screen and (min-width: map-get($conf, 'min')) {
+      @content
+    }
+  } @else {
+    @media only screen and (max-width: map-get($conf, 'max')) {
+      @content
+    }
+  }
+}

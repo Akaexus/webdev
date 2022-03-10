@@ -1,0 +1,17 @@
+@import 'vars';
+
+body > footer {
+  background-color: $accent-color;
+  border-top: 2px solid #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  > .author {
+    margin: 2em 0;
+    text-align: center;
+    > strong {
+      display: block;
+      font-weight: bold;
+    }
+  }
+}

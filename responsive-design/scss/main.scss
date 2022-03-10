@@ -1,0 +1,20 @@
+@import 'reset';
+@import 'vars';
+@import 'header';
+@import 'grid';
+@import 'articles';
+@import 'footer';
+
+body {
+  color: $font-color;
+  font: $font-size $main-font;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  > main {
+    flex: 1;
+  }
+}
+
+
+

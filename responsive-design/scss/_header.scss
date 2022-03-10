@@ -1,0 +1,72 @@
+@import 'vars';
+@import 'mixins';
+
+header {
+  width: 100%;
+  > nav {
+    display: flex;
+    flex-direction: row;
+    font-family: $header-font;
+    padding: 1em;
+    > .branding {
+      flex: 0 1 100%;
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      font-size: 2rem;
+      img {
+        height: 3em;
+      }
+      h1 {
+        @include media-screen('small') {
+          display: none;
+        }
+      }
+    }
+    > .menu {
+      display: flex;
+      flex-shrink: 1;
+      justify-self: end;
+      align-items: center;
+      > ul {
+        list-style: none;
+        display: none;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        > li {
+          width: 8ch;
+          text-align: center;
+        }
+      }
+      > .burger {
+        height: 4em;
+        width: 4em;
+        background: $accent-color;
+        border: 2px solid #000;
+        border-radius: .75em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        > .bar {
+          width: 66%;
+          height: 7.5%;
+          background: #000;
+        }
+      }
+      @include media-screen('large') {
+        > .burger {
+          display: none;
+        }
+        > ul {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}

@@ -1,0 +1,28 @@
+/* TYPOGRAPHY */
+$font-size: 16px;
+$main-font: Arial, Helvetica, sans-serif;
+$header-font: Times New Roman, serif;
+
+
+/* COLORS */
+$main-color: #fff;
+$accent-color: #e0e4cc;
+$font-color: #000;
+$article-colors: [#69d2e7, #f38630, #e9aeaf];
+
+/* SCREEN SIZES */
+$screen-sizes: (
+        'small': (
+                'max': 600px - 1px,
+                'columns': 1fr
+        ),
+        'medium': (
+                'min': 600px,
+                'max': 1024px - 1px,
+                'columns': 1fr 1fr
+        ),
+        'large': (
+                'min': 1024px,
+                'columns': repeat(3, 1fr)
+        )
+);
