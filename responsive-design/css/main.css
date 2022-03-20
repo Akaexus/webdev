@@ -1,0 +1,194 @@
+/* https://css-tricks.com/reboot-resets-reasoning/ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+/* TYPOGRAPHY */
+/* COLORS */
+/* SCREEN SIZES */
+/* TYPOGRAPHY */
+/* COLORS */
+/* SCREEN SIZES */
+/* TYPOGRAPHY */
+/* COLORS */
+/* SCREEN SIZES */
+header {
+  width: 100%;
+}
+header > nav {
+  display: flex;
+  flex-direction: row;
+  font-family: Times New Roman, serif;
+  padding: 1em;
+}
+header > nav > .branding {
+  flex: 0 1 100%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  font-size: 2rem;
+}
+header > nav > .branding img {
+  height: 3em;
+}
+@media only screen and (max-width: 599px) {
+  header > nav > .branding h1 {
+    display: none;
+  }
+}
+header > nav > .menu {
+  display: flex;
+  flex-shrink: 1;
+  justify-self: end;
+  align-items: center;
+}
+header > nav > .menu > ul {
+  list-style: none;
+  display: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+header > nav > .menu > ul > li {
+  width: 8ch;
+  text-align: center;
+}
+header > nav > .menu > .burger {
+  height: 4em;
+  width: 4em;
+  background: #e0e4cc;
+  border: 2px solid #000;
+  border-radius: 0.75em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+header > nav > .menu > .burger > .bar {
+  width: 66%;
+  height: 7.5%;
+  background: #000;
+}
+@media only screen and (min-width: 1024px) {
+  header > nav > .menu > .burger {
+    display: none;
+  }
+  header > nav > .menu > ul {
+    display: flex;
+  }
+}
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* TYPOGRAPHY */
+/* COLORS */
+/* SCREEN SIZES */
+/* TYPOGRAPHY */
+/* COLORS */
+/* SCREEN SIZES */
+.articles {
+  display: grid;
+  gap: 2em;
+  padding: 2em;
+}
+@media only screen and (max-width: 599px) {
+  .articles {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+  .articles {
+    grid-template-columns: 1fr 1fr;
+  }
+  .articles > article:nth-of-type(3n + 1) {
+    grid-column: 1/span 2;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .articles {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* TYPOGRAPHY */
+/* COLORS */
+/* SCREEN SIZES */
+.articles > article {
+  background: #e0e4cc;
+  border: 2px solid #000;
+  display: flex;
+  flex-direction: column;
+}
+.articles > article > header {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.articles > article > header h2 {
+  font-size: 1.5em;
+  padding: 0.5em 2em;
+  border: solid #000;
+  border-width: 0 0 2px 2px;
+}
+.articles > article:nth-of-type(3n+1) > header > h2 {
+  background-color: #69d2e7;
+}
+.articles > article:nth-of-type(3n+2) > header > h2 {
+  background-color: #f38630;
+}
+.articles > article:nth-of-type(3n+3) > header > h2 {
+  background-color: #e9aeaf;
+}
+.articles > article p {
+  margin: 2em;
+}
+
+/* TYPOGRAPHY */
+/* COLORS */
+/* SCREEN SIZES */
+body > footer {
+  background-color: #e0e4cc;
+  border-top: 2px solid #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body > footer > .author {
+  margin: 2em 0;
+  text-align: center;
+}
+body > footer > .author > strong {
+  display: block;
+  font-weight: bold;
+}
+
+body {
+  color: #000;
+  font: 16px Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+body > main {
+  flex: 1;
+}
+
+/*# sourceMappingURL=main.css.map */
