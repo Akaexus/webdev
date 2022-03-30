@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <script type="text/javascript"
+                src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(()=>{
+                function edit(event) {
+                    const value = event.target.textContent;
+                    $(event.target).append(`<input id="edit" value="${value}">`);
+                    $('#edit').focus();
+                    $('#edit').blur((e)=> {
+                        $(event.target).text($('#edit')[0].value);
+                        $('#edit').remove();
+                        $(event.target).one('click', edit);
+                        $('button').trigger('asdf');
+                    })
+                }
+
+                $('td').one('click', edit);
+
+
+                $('button').bind('asdf', function () { alert('The cake is a lie!'); });
+            });
+        </script>
+    </head>
+    <body>
+    <table>
+        <tr><td>One</td></tr>
+        <tr><td>Two</td></tr>
+        <tr><td>Three</td></tr>
+        <tr><td>...</td></tr>
+    </table>
+    <button>button</button>
+    </body>
+</html>

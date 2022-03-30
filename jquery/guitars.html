@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script type="text/javascript"
+            src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <style>
+        a { margin: 10px; }
+        #content { border: 1px solid black; padding: 20px; width: 50%; }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $('#button').click(function () {
+                console.log('xd');
+                $.getJSON('guitars.json', (data)=> {
+                    console.log(data);
+                    $('#content').append(JSON.stringify(data));
+                })
+                // $('#content').animate({height: '0px', width: '0px'}, () => {
+                //     $('#content').load('AJAX' + $(this).attr('href'), () => {
+                //         $('#content').animate({ height: '500px', width: '500px'});
+                //     });
+                // });
+                return false;
+            });
+
+        });
+    </script>
+</head>
+<body>
+<header><nav>
+    <button id="button">Get guitars</button>
+</nav></header>
+<div id="content"></div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <script>
+            (()=>{
+                async function ajaxGET(url) {
+                    return new Promise((resolve, reject)=> {
+                        const req = new XMLHttpRequest();
+                        req.open('GET', url, true);
+                        req.send();
+                        req.addEventListener('readystatechange',()=>{
+                            if (req.readyState === 4) {
+                                if (req.status >= 200 && req.status <= 299) {
+                                    resolve(req.responseText);
+                                } else {
+                                    reject('Network error when attempting to fetch resource.');
+                                }
+                            }
+                        })
+                    });
+                }
+
+                ajaxGET('https://enable-cors.org/').then((data)=>{
+                    console.log(data);
+                }).catch((e) => {
+                    console.error(e);
+                })
+            })();
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8" />
+        <title>jQuery</title>
+        <style>
+            .asdf {
+                background: pink;
+            }
+        </style>
+        <script type="text/javascript"
+                src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                // alert('Did you know that you can copy this text using Ctrl + C shortcut? ');
+                $(function () {
+                    $('#a').css('color', 'red').append(' appended text');
+                });
+                $('div').css('color', 'green');
+                $('.c').css('font-size', 'x-large');
+                $('tr + tr').css('color', 'aqua');
+                $('table tr:first').css('color', 'yellow');
+                $('tr:last').css('color', 'yellow');
+                $('p:even').css('color', 'orange');
+                $('[href]').css('border', '1px solid black').css('padding', '3px');
+                $('a[href*=kalaka]').css('border', '1px solid pink');
+                $('a[href$=\'.pdf\']').css('border', '1px solid red')
+                alert('The color of an element with id="a" is ' + $('#a').css('color'));
+
+                // style
+                $('button:contains(\'A\')').click(function () {
+                    $('#classic').addClass('asdf');
+                });
+                $('button:contains(\'B\')').click(function () {
+                    $('#classic').removeClass('asdf');
+                });
+                $('button:contains(\'C\')').click(function () {
+                    $('#toggle').toggleClass('asdf');
+                });
+                $('tr:even').addClass('asdf');
+
+                $('ol li.a').filter((index, node)=>{
+                    return !$(node).find('a.b').length
+                }).css('background', 'green');
+            });
+
+        </script>
+    </head>
+    <body>
+        <h2>Selectors</h2>
+        <p id="a">a</p><p>b</p>
+        <p>c</p><p>d</p>
+        <div>e</div><div class="c">f</div>
+        <table>
+            <tr><td>First</td></tr>
+            <tr><td>Second</td></tr>
+            <tr><td>Third</td></tr>
+            <tr><td>Fourth</td></tr>
+            <tr><td>Fifth</td></tr>
+            <tr><td>Sixth</td></tr>
+        </table>
+        <a href="wakalaka.html">Wakalaka</a>
+        <a href="asdf.pdf">PDF</a>
+        <a href="asdf.html">Asdf</a>`
+        <h2>Style</h2>
+        <table>
+            <tr><td>First</td></tr>
+            <tr><td>Second</td></tr>
+            <tr><td>Third</td></tr>
+            <tr><td>Fourth</td></tr>
+            <tr><td>Fifth</td></tr>
+            <tr><td>Sixth/td></tr>
+        </table>
+        <div><button>Text A</button><button>Text B</button><span id="classic">Adding/removing
+class</span></div>
+        <div><button>Text C</button><span id="toggle">Toggling class</span></div>
+        <ol>
+            <li class="a"><a href="">1</a></li>
+            <li class="a"><a class="b" href="">2</a></li>
+            <li class="a"><a href="">3</a></li>
+            <li class="a"><a href="">4</a></li>
+            <li class="a"><a href="">5</a></li>
+        </ol>
+    </body>
+</html>
