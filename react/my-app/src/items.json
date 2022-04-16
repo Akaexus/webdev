@@ -1,0 +1,19 @@
+{
+  "columnNames": {
+    "name": "Nazwa",
+    "image": "Obrazek",
+    "description": "Opis",
+    "rating": "Ocena"
+  },
+  "items": [{
+      "name": "Płyta tarasowa Triest 30 x 60 x 5 cm wapień muszlowy",
+      "image": "https://media.castorama.pl/media/catalog/product/P/l/Plyta_tarasowa_Triest_30_x_60_x_5_cm_wapien_muszlowy-637516-687634.webp",
+      "description": " Chcesz ciekawie wykończyć werandę, taras, podjazd czy ścieżkę w ogrodzie? Nasza propozycja to płyta tarasowa Triest wapień muszlowy. Produkt wyróżnia się nowoczesnym formatem i niesztampową kolorystyką. Płytkę wykonano z betonu. Jej krawędzie wyposażono w delikatną mikrofazę, dzięki czemu łączenia pomiędzy dwoma elementami są mniej widoczne.",
+      "rating": 2
+    }, {
+      "name": " Płyta chodnikowa Knap 61 x 30,5 x 4 cm trawertyn ",
+      "image": "https://media.castorama.pl/media/catalog/product/P/l/Plyta_chodnikowa_Knap_61_x_30_5_x_4_cm_trawertyn-637397-683305.jpg",
+      "description": "  Płyta chodnikowa Knap trawertyn to praktyczny element architektury ogrodowej. Z tego typu płyt możesz ułożyć solidne i efektowne chodniki lub ścieżki wokół budynku. Produkt jest odporny na uszkodzenia mechaniczne, warunki atmosferyczne, a do tego wyróżnia się uniwersalnym designem. W sklepie Castorama znajdziesz również inne wersje płyt chodnikowych z kolekcji Knap Garden. ",
+      "rating": 4
+    }]
+}
