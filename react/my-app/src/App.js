@@ -42,7 +42,7 @@ class App extends React.Component {
       if (dir === 'asc') {
         nextDir = 'desc';
       } else if (dir === "desc") {
-        column = null
+        column = null;
       }
     } else {
       nextDir = 'asc';
