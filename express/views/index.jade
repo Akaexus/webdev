@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1= "sklep"
+  a(href='/cart') Koszyk
+  table
+    thead
+      th(colspan=2) Produkt
+    tbody
+      each product in products
+        tr
+          td #{product.name}
+          td
+            if cart.includes(product.id)
+              form(action='cart/delete' method='post')
+                input(hidden name='id' value=product.id)
+                input(type='submit' value='Usuń z koszyka')
+            else
+              form(action='cart/add' method='post')
+                input(hidden name='id' value=product.id)
+                input(type='submit' value='Dodaj do koszyka')

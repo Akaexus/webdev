@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    h1 Koszyk
+    a(href='/') Strona główna
+    if error
+        div #{error}
+    table
+        thead
+            th Produkt
+        tbody
+            each product in cart
+                tr
+                    td #{product.name}
+    form(action='/cart/clear' method='post')
+        input(type='submit' value='Wyczyść')
+    form(action='/cart/checkout' method='post')
+        input(type='submit' value='Finalizuj zakup')
