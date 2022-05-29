@@ -1,0 +1,15 @@
+﻿@model IEnumerable<MVC.Models.Genre>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Genres</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+
+    @Html.Partial("_GenresList", Model)
+
+</p>
+
