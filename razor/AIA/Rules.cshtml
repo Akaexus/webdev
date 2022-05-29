@@ -1,0 +1,40 @@
+﻿@{
+    var rulesAsList = new List<string>();
+    if (Session["rules"] != null)
+    {
+        rulesAsList = Session["rules"] as List<string>;
+    }
+
+
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+    <form method="post" action="RulesAction.cshtml">
+        <p>
+            <label for="rule"> Enter rule: </label>
+            <input name="rule" value="" />
+
+        </p>
+        <input type="submit" value="Enter" />
+
+    </form>
+
+    <ol>
+
+        @if (rulesAsList.Count() > 0)
+        {
+            foreach (var rule in rulesAsList)
+            {
+                <li>The rule is: @rule</li>
+            }
+        }
+    </ol>
+
+</body>
+</html>
